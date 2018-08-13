@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notemaster</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://davidtkatz.com/public_css/noteMaster.css">
+</head>
+<body>
+    <div id="app">
+        <h3>{{title}}</h3>
+        <div class="form">
+            <div class="form-group">
+                <div class="form-group">
+                   <label>Note Title</label>
+                    <input class="form-coon" type="text" v-model="note.title">
+                </div>
+                <div class="form-group">
+                    <label>Note Text</label>
+                    <textarea v-model="note.text" rows="5"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-4 note">
+                <div class="card">
+                    <button class="close">x</button>
+                    <div class="card-block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var app = new Vue({
+    el: '#app',
+    data: {
+        title: 'Notemaster',
+        note: {
+            title: '',
+            text: '',
+        }
+    }
+    })
+</script>
+</body>
+</html>
