@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessing the Index with v-for loop</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Company</th>
+                    <th>Index</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(employee, index) in employees">
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.title}}</td>
+                    <td>{{companyName}}</td>
+                    <td>{{index}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script src="vForLoopIndex.js"></script>
+</body>
+</html>

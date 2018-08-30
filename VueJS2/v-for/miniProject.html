@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini project</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- EXERCISE 1: Use two-way data binding to update the value of a "password" data property. -->
+   <input type="text" placeholder="Enter your name" v-model="password">
+    <p>{{password}}</p>
+    <br>
+    <!-- EXERCISE 2: Show the correct paragraph depending on the length of the entered password. -->
+    <p v-if="password.length > 8">Awesome! Your password is longer than 8 characters.</p>
+    <p v-else-if="password.length > 0">Please enter a longer password.</p>
+    <p v-else>Please enter a password.</p>
+    <br>
+    <!-- EXERCISE 3: Display the categories as an ordered list with each category's sub-categories as a nested unordered list. -->
+    <template>
+    <ol>
+        <li v-for="code in categories"> {{code.name}}
+            <ul>
+                <li v-for="sub in code.sub">{{sub}}</li>
+            </ul>
+        </li>
+    </ol>
+    </template>
+</div>
+<script src="miniProject.js"></script>
+</body>
+</html>

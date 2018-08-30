@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-for Loop</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Movies</h1>
+        <ul>
+            <li v-for="title in movieTitles">{{title}}</li>
+        </ul>
+        <br>
+<!-- Example above is looping though an array, example below is looping through object -->
+        <h1>Employees</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="employee in employees">
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.title}}</td>
+                    <td>{{companyName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script src="vForLoop.js"></script>
+</body>
+</html>

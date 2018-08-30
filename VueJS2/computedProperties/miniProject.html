@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Properties Mini Project</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<div id="app">
+    <!-- EXERCISE 1: Add a computed property which returns an array of strings
+    with the movie name followed by the release year in parenthesis.
+    Then output these strings as an ordered list. -->
+    <ol>
+        <li v-for="movie in myMovie">{{ movie}}</li>
+    </ol>
+
+    <!-- EXERCISE 2: Make the button below add a movie of your choice to the
+    "movies" data property. Then add a watcher which outputs the movie that
+    was just added in an alert dialog. -->
+    <button v-on:click="addMovie">Add Movie</button>
+</div>
+<script src="miniProject.js"></script>
+</body>
+</html>

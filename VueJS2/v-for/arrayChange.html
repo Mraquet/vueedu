@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="n in numbers">{{n}}</li>
+    </ul>
+    <button v-on:click="changeNumber()">Change number</button>
+</div>
+
+<script src="arrayChange.js"></script>
+</body>
+</html>

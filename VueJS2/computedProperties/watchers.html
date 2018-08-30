@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watchers</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="searchQuery">
+    <p v-if="isSearching">Searching...</p>
+    <div v-else>
+        <ol>
+            <li v-for="result in results">{{result}}</li>
+        </ol>
+    </div>
+</div>
+<script src="watchers.js"></script>
+</body>
+</html>

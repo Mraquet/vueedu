@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="itemsInStock > 10">{{itemsInStock}} In stock</p>
+        <p v-else-if="itemsInStock > 0">Hurry up there are just a few items left!</p>
+        <P v-else>Too bad, we're all out!</P>
+        <template v-if="itemsInStock > 50">
+            <p>Special offer!</p>
+            <p>Looks like we have tons of products in stock... Save 20? off your order now!</p>
+        </template>
+    </div>
+<script src="conditionalRendering.js"></script>
+</body>
+</html>
