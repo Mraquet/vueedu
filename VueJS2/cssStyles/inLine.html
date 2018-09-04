@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Filters</title>
+    <title>In line Styles</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="inLine.css">
 </head>
 <body>
 <div id="app">
-    <ul>
-        <li v-for="mess in message">{{mess | uppercase}}</li>
-    </ul>
+    <div style="width: 200px; height: 200px;" v-bind:style = 'styles'></div>
 
 </div>
-<script src="filters.js"></script>
+<script src="inLine.js"></script>
 </body>
 </html>

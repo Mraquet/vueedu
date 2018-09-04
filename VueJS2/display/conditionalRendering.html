@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="app">
-        <p v-if="itemsInStock > 10">{{itemsInStock}} In stock</p>
+        <p v-if="itemsInStock > 10">{{itemsInStock}} Items in stock</p>
         <p v-else-if="itemsInStock > 0">Hurry up there are just a few items left!</p>
         <P v-else>Too bad, we're all out!</P>
         <template v-if="itemsInStock > 50">
