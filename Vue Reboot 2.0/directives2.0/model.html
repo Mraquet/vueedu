@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Model</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <p>{{text}}</p>
+    <input v-model="text">
+</div>
+    <script src="model.js"></script>
 </body>
 </html>

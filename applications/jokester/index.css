@@ -6,3 +6,10 @@
     color: #263238;
     margin-top: 60px;
 }
+
+.joke-card {
+    border: 2px solid #263238;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 5px;
+}

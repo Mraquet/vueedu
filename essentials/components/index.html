@@ -45,3 +45,18 @@
 </script>
 </body>
 </html>
+
+
+
+
+completeTask() {
+var checkBox = document.getElementById('checkedBox');
+var completedTasks = document.getElementById('taskNumber');
+if (checkBox.checked == true){
+this.numberCompleted++
+} else if (checkBox.checked == false){
+this.numberCompleted--
+}
+}
+
+

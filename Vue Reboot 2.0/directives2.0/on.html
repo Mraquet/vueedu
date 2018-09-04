@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>On Click</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <h2>Did you know that {{message}} spelled backwards is {{message}}?</h2>
+    <button class="btn" v-on:click ="reverseMessage">Click me</button>
+</div>
+
+    <script src="on.js"></script>
 </body>
 </html>

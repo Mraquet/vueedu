@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorthand Syntax</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="hello">Hello (v-on)</button>
+    <button @click="hello">Hello (shorthand)</button>
+
+    <p v-bind:title="title">Hover me (v-bind)</p>
+    <p :title="title">Hover me (shorthand)</p>
+</div>
+<script src="shortHands.js"></script>
+</body>
+</html>

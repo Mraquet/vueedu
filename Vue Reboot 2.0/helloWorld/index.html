@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Making Vue my Bih</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <div class="container">
+        <h3>Mosaic Employees:</h3>
+        <ul>
+           <li v-for="employee in employees"{{employee.name}}</li>
+        </ul>
+    </div>
+</div>
+
+    <script src="index.js"></script>
 </body>
 </html>

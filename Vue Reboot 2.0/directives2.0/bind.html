@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <div class="container">
+       <div v-bind:title="message">
+           This is some text. When you hover over it, the exact time and date will appear.
+       </div>
+    </div>
+</div>
+<br>
+<div id="app2">
+    <span v-if="seen">Want to see this text disappear?</span>
+</div>
+    <script src="bind.js"></script>
 </body>
 </html>

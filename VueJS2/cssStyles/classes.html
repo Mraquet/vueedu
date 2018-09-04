@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styles with Classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="classes.css">
+</head>
+<body>
+<div id="app">
+    <div class="shape"
+         v-for="shape in shapes"
+         v-bind:class="[ shape.shape, shape.direction ? shape.direction : '', { animate: shape.animate } ]">
+
+    </div>
+</div>
+<script src="classes.js"></script>
+</body>
+</html>

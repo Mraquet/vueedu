@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <script src="http://unpkg.com/vue"></script>
+    <title>Markdown Editor</title>
 </head>
 <body>
-$END$
+    <div id="app">
+        <input type="text" v-model="msg">
+        <p>{{msg}}</p>
+    </div>
+<script src="main.js"></script>
 </body>
 </html>
