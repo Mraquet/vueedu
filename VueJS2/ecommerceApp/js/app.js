@@ -3,7 +3,7 @@ new Vue({
     data: {
         isShowingCart: false,
         cart: {
-          items: []
+            items: []
         },
         products: [
             {
@@ -72,7 +72,6 @@ new Vue({
                 });
             }
 
-
             product.inStock--;
         },
         getCartItem: function(product) {
@@ -82,7 +81,33 @@ new Vue({
                 }
             }
             return null;
+        },
+        increaseQuantity: function(cartItem) {
+            cartItem.product.inStock--;
+            cartItem.quantity++;
+        },
+        decreaseQuantity: function(cartItem) {
+            cartItem.quantity --;
+            cartItem.product.inStock++;
+            if (cartItem.quantity === 0) {
+                this.removeItemFromCart(cartItem);
+            }
+        },
+        removeItemFromCart: function(cartItem) {
+            let index = this.cart.items.indexOf(cartItem);
+            if (index !== -1) {
+                this.cart.items.splice(index, 1);
+            }
+        },
+        checkOut: function() {
+            if (confirm('Are yu sure that you want to purchase these products?')) {
+                this.cart.items.forEach(function(item) {
+                    item.product.inStock += item.quantity;
+                });
+                this.cart.items = [];
+            }
         }
+
     },
     computed: {
         cartTotal: function() {

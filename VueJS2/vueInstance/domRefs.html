@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <title>Using Refs</title>
+</head>
+<body>
+<div id="app">
+     <h1>Please enter your username and password</h1>
+    <input type="text" ref="username"/>
+    <button @click="logIn">Log in</button>
+    <h3>Hello, {{firstName}}</h3>
+    <br>
+</div>
+<script src="domRefs.js"></script>
+</body>
+</html>

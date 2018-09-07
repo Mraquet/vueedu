@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <title>Lifecycle Hooks</title>
+</head>
+<body>
+<div id="app">
+<!-- when ONLY using h1 and no button, alerts stop at mounted because data is never updated-->
+    <h1>{{message}}</h1>
+    <button @click="message = 'Goodbye World!'">Change text</button>
+
+<!--no alerts show bc hooks are only invoked when the virtual DOM changes and real DOM needs to be updated. Vue knows we arent displaying the counter property so theres no reason to update the DOM
+    <button @click="counter++">Increase Counter</button> -->
+
+<!--when we display the counter, hooks are invoked because the DOM is updated.-->
+    <button @click="counter++">Increase Counter and invoke hooks {{counter}}</button>
+</div>
+<script src="lifecycleHooks.js"></script>
+</body>
+</html>
